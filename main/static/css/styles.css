@@ -1,0 +1,34 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.navbar{
+    background-color: #23415c;
+    padding: 1% 0;
+    font-size: 1.2em;
+}
+.navbar-brand{
+    color: #D5D5D5;
+    font-size: 25px;
+    padding: 0 15px 5px;
+}
+.navbar-brand:hover{
+    color: white;
+}
+.navbar-nav li a{
+    color: #D5D5D5;
+}
+.navbar-nav li a:hover, .navbar-nav li a.active{
+    color: #FFF;
+}
+#home{
+    background-image: url('../images/wlcme2.jpg');
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    font-weight: 700;
+    font-size: 500%;
+    color: white;
+}
