@@ -9,8 +9,9 @@ html, body{
 }
 .navbar-brand{
     color: #D5D5D5;
-    font-size: 25px;
+    font-size: 30px;
     padding: 0 15px 5px;
+    font-family: 'Metal Mania', cursive;
 }
 .navbar-brand:hover{
     color: white;
