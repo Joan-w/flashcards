@@ -1,0 +1,38 @@
+{%extends 'all/base.html'%}
+
+{%block content%}
+<br>
+<div class="container" style="background-image: url('/static/img/background.jpg');">
+    <div class="row" style="color:white;">
+        {% if cards %}
+        <h2 class="">Found {{ cards|length }} cards of searched term {{message}}</h2>
+        {% else %}
+        <h2> Found 0 cards for the search term {{message}}</h2>
+        {% endif %}
+
+    </div>
+
+    <div class="row d-flex">
+
+        {% if cards %}
+        
+        <div class="d-flex flex-row">
+            {% for card in cards %}
+            <div class="d-flex flex-column" style="padding-left: 2%;">
+                
+            
+            <div class="card">
+                {{card.subject}}
+                <em><Caption>{{card.title}}</Caption> </em> <br>
+            {{card.text}}
+              
+            </div>
+        </div> 
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+
+{%endblock%}
