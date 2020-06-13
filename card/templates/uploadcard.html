@@ -1,0 +1,29 @@
+{%extends 'all/base.html'%}
+
+{%block content%}
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+
+            {% if user.is_authenticated %}
+            <form action="/uploadcard/{{user.id}}/" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+
+                {{ form.subject.label_tag}}
+                {{ form.subject }}<br>
+                {{ form.title.label_tag}}
+                {{form.title }}<br>
+                {{form.text.label_tag}}
+                {{form.text }}
+                <hr>
+
+
+                <button type="submit">Post</button>
+            </form>
+            {%endif%}
+        </div>
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,29 @@
+{%extends 'all/base.html'%}
+
+{% load bootstrap4 %}
+<!-- Some content here-->
+
+{%block content%}
+<br>
+<div class="container">
+    <div class="row d-flex">
+
+        {% if cards %}
+        
+        <div class="d-flex flex-row">
+            {% for card in cards %}
+            <div class="d-flex flex-column" style="padding-left: 2%;">
+                
+            
+            <div class="card">
+                {{card.subject}}
+                <em><Caption>{{card.title}}</Caption> </em> 
+                <a href="/card/{{card.id}}"><span  class="thumbnail">{{card.text}}</span></a><br>              
+            </div>
+        </div> 
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>   
+</div>
+{%endblock%}
